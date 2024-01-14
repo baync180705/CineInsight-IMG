@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header id="dash_header">
+        <a class="head_contents" id = "cineInsight">CineInsight</a>
+        <a class="head_contents" href = "CineInsight.html"><i class="fa-solid fa-house"></i></a>
+        <a class="head_contents"><i class="fa-solid fa-user" onclick = "showLogout()"></i></a>
+        <a class="head_contents" id="filterButton" onclick="showFilter()"><i class="fa-solid fa-filter"></i></a>
+        <form id = "form"><input type="text" class="head_contents" id="search" placeholder="Search"></form>
+    </header>
+    <a id="Logout" onmouseleave="hideLogout()" href = "index.html">Logout</a>
+
+    <div id = "section_head">
+        <a class = "section_options" id ="top_rated" onclick="ChangeMovies('top_rated')" >Top Rated</a>
+        <a class = "section_options" id ="now_playing" onclick="ChangeMovies('now_playing')">Now Playing</a>
+        <a class = "section_options" id ="upcoming" onclick="ChangeMovies('upcoming')">Upcoming</a>
+    </div>
+    
+    <div id = "filter_box" onmouseleave = "hideFilter()">
+        <div class = "filter_content">
+            <h1>Language</h1>
+            <a id = "Bengali" onclick="displayFilters('with_original_language=bn', 'Bengali')">Bengali</a>
+            <a id = "English" onclick="displayFilters('with_original_language=en', 'English')">English</a>
+            <a id = "Hindi" onclick="displayFilters('with_original_language=hi', 'Hindi')">Hindi</a>
+            <a id = "Kannada" onclick="displayFilters('with_original_language=kn', 'Kannada')">Kannada</a>
+            <a id = "Telegu" onclick="displayFilters('with_original_language=te', 'Telegu')">Telegu</a>
+        </div>
+        <div class = "filter_content">
+            <h1>Genre</h1>
+            <a id = 'Action' onclick="displayFilters('with_genres=28','Action')">Action</a>
+            <a id = 'Comedy' onclick="displayFilters('with_genres=35','Comedy')">Comedy</a>
+            <a id = 'History' onclick="displayFilters('with_genres=36','History')">History</a>
+            <a id = 'Horror' onclick="displayFilters('with_genres=27', 'Horror')">Horror</a>
+            <a id = 'Romance' onclick="displayFilters('with_genres=10749', 'Romance')">Romance</a>
+            <a id = 'Thriller' onclick="displayFilters('with_genres=53','Thriller')">Thriller</a>
+        </div>
+        <div class = "filter_content">
+            <h1>Streaming Services</h1>
+            <a id = 'Amazon' onclick="displayFilters('watch_region=IN&with_watch_providers=10', 'Amazon')">Amazon Prime Videos</a>
+            <a id = 'Apple' onclick="displayFilters('watch_region=IN&with_watch_providers=2', 'Apple')">Apple Tv</a>
+            <a id = 'Hotstar' onclick="displayFilters('watch_region=IN&with_watch_providers=122', 'Hotstar')">Hotstar</a>
+            <a id = 'Netflix' onclick="displayFilters('watch_region=IN&with_watch_providers=8', 'Netflix')">Netflix</a>
+        </div>
+    </div>
+
+    <main id = dash_main>
+    </main>
+
+    <a id = "upIcon" href = "#"><i class="fa-solid fa-arrow-up"></i></a>
+
+
+
+    <div id="footer">Made with &hearts; by Budhayan</div>
+
+    <script src ="script.js"></script>
+
+</body>
+</html>
